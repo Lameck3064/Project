@@ -1,0 +1,393 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Headings */
+h2 {
+    color: blue;
+}
+
+h3 {
+    color: #0de814;
+}
+
+/* Header */
+.header {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: medium;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+/* Title Animation */
+.typing {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    color: transparent;
+    background-image: linear-gradient(90deg, #4CAF50, #2196F3, #FF5722);
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: typing 4s steps(30, end), colorChange 4s linear infinite;
+    border-right: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.typing::after {
+    content: '|';
+    position: absolute;
+    right: -5px;
+    animation: blink-caret 0.7s step-end infinite;
+    color: #fff;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes colorChange {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+/* Style for desktop */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #005bb5;
+    color: white;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding:10px;
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hide the mobile menu by default */
+.navbar-mobile {
+    display: none;
+    flex-direction: column;
+    background-color: #0066cc;
+}
+
+.navbar-mobile a {
+    padding: 8px 0;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+/* Style for smaller screens */
+@media (max-width: 600px) {
+    .navbar a{
+        display: none;
+    }
+    .menu-toggle{
+        display: block;
+        margin-right: auto;
+    }
+    .navbar-mobile.active{
+        display: flex;
+    }
+}
+
+/* Content Sections */
+.section {
+    margin: 20px;
+    padding: 20px;
+    background: #e0e5ec;
+    border-radius: 10px;
+}
+
+/* Responsive Card Layout */
+.service-cards,.client-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    background-position: center;
+    background-repeat: repeat;
+}
+.service-bosa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.card, .tabs, .bosa {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img, .bosa img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/*----social media---*/
+.footer-media{
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    height: 40px;
+    align-items: center;
+}
+.social-media a{
+    display: inline-flex;
+    width: 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #09078d;
+    color: #12f7ff;
+    border: 2px solid #12f7ff;
+    transition: .6s;
+    box-shadow: 0,0,0.3rem #12f7ff;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.footer-media a i{
+    font-size: 1.5rem;
+}
+.social-media a:hover{
+    color:#0b6cce;
+}
+.footer-media a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #12f7ff;
+    transition: .6s;
+    z-index: -1;
+}
+.social-media a:hover::before{
+    width: 100%;
+}
+/*contact us*/
+/* contact us */
+.kemu {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+/*insigthe----*/
+#insights h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.boss{
+    color: #555;
+}
+.insight-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.insight .icon {
+    font-size: 2em;
+    color: blue; /* Green color for icons */
+    margin-bottom: 10px;
+}
+
+/*insights--*/
+#insights {
+    padding: 40px 0;
+    text-align: center;
+    background-color: yellowgreen;
+}
+
+#insights h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.boss{
+    color: #555;
+}
+.insight-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.insight .icon {
+    font-size: 2em;
+    color: blue; /* Green color for icons */
+    margin-bottom: 10px;
+}
+
+.insight {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.insight h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.insight .figure {
+    font-size: 1.8em;
+    color: #28a745; /* Green color for figures */
+    font-weight: bold;
+}
+
+/* WhatsApp Icon */
+/*.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+}*/
+
+.whatsapp-icon:hover {
+    background-color: #128C7E;
+}
+
+.whatsapp-icon img {
+    width: 15px;
+    height: 15px;
+}
+/* Logo Styles */
+.logo {
+    width: 120px; /* Set a base size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the logo */
+    display: block; /* Centers within container */
+}
+
+/* Adjust logo for smaller screens */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px; /* Smaller size for mobile */
+    }
+}
+
+/* Adjust logo for larger screens */
+@media (min-width: 992px) {
+    .logo {
+        width: 180px; /* Larger size for desktops */
+    }
+}
+
+
+/* Client Logos */
+.client {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.client img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .service-cards, .insight-cards, .client-logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .service-cards, .insight-cards, .client-logos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*animation for objectives*/
+.objectives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.objective-card {
+    background-color: #3d0cec;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.objective-card p {
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+}
+
+.objective-card strong {
+    color: yellowgreen;
+}
