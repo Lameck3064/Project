@@ -49,7 +49,7 @@ h3 {
 }
 
 .typing::after {
-    content: '|';
+    content: '';
     position: absolute;
     right: -5px;
     animation: blink-caret 0.7s step-end infinite;
